@@ -14,3 +14,6 @@
 - [ ] Rewrite each of the six reasons so it follows a clear problem-to-handling structure using customer language.
 - [ ] Make each reason explicitly explain what the reader is experiencing, why that issue matters, and how Motilli is meant to help with that specific problem.
 - [ ] Strengthen the listicle argument so it reads like cause and effect rather than a loose set of observations.
+- [ ] Replace the page copy with the user-provided copy from pasted_content_2.txt.
+- [ ] Preserve the current layout and components where possible while swapping in the new headline, hook, six reasons, ingredient copy, proof copy, and offer copy.
+- [ ] Verify the updated copy still renders cleanly across the page and compiles without errors.

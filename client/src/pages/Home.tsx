@@ -1,7 +1,7 @@
 /*
 Page copy direction: customer-facing only.
-Use the reader's language, lead with symptom recognition,
-move quickly into the six reasons, and keep the tone reassuring and believable.
+Use the user's supplied draft throughout the page,
+keep the flow editorial, and preserve a fast path into the six reasons.
 */
 import { motion } from "framer-motion";
 import {
@@ -27,51 +27,60 @@ const dinnerImage =
 const quickFacts = [
   "For women using Ozempic, Wegovy, Mounjaro, or Zepbound",
   "90-day money-back guarantee",
-  "Pectin-based gummy that feels easy to take",
-  "Made for bloating, sulfur burps, heaviness, and slow digestion",
+  "Pectin-based gummies. No capsules, no powders.",
+  "Buy 2, get 1 free. Free shipping over $45.",
 ];
 
 const reasons = [
   {
     number: "01",
-    title: "Because that hard, swollen, food-is-just-sitting-there feeling usually means you need support higher up.",
+    title: "It targets your stomach — where the problem actually starts.",
     body:
-      "When bloating feels tight, heavy, and stuck for hours after you eat, a lot of women realize this is not regular overeating bloat. Motilli is meant to support stomach motility, which is why it feels more relevant to women dealing with that slow, backed-up feeling after GLP-1 meals.",
+      "Most GLP-1 bloating is not a colon problem. It is a stomach problem. GLP-1 medications slow gastric emptying, which means food sits in the stomach longer, ferments, and produces the pressure, gas, and sulfur burps women describe as feeling stuck up high. Motilli’s lead ingredient is apigenin from celery juice extract — a natural prokinetic that helps wake up stomach motility so food keeps moving the way it is supposed to. That is why it feels different from anything that works on the colon.",
     icon: Sparkles,
   },
   {
     number: "02",
-    title: "Because sulfur burps are not just gross — they are often a sign food is lingering too long.",
+    title: "It works where laxatives, fiber, and magnesium cannot reach.",
     body:
-      "That sour, rotten-egg burping can leave women embarrassed, anxious, and scared to eat before errands or social plans. Motilli is used here because it is positioned around the slow-digestion pattern women blame for that symptom, not just around generic gut support.",
-    icon: BadgeCheck,
-  },
-  {
-    number: "03",
-    title: "Because if the problem starts in the stomach, random bathroom fixes may not touch the part that feels worst.",
-    body:
-      "A lot of women try laxatives, magnesium, or a probiotic and still feel painfully full up top. That is exactly where Motilli enters the conversation: as a more targeted digestive support option for the heavy, stalled feeling that seems to begin before food moves through the rest of the system.",
+      "Miralax, Dulcolax, magnesium citrate, psyllium husk, probiotics — every one of them works in the colon, six feet downstream from where a GLP-1 is actually slowing you down. That is why you can take all of them and still feel painfully full up top. Motilli is built for the stomach itself, which is why it fits the one spot the rest of your cabinet does not cover.",
     icon: Waves,
   },
   {
-    number: "04",
-    title: "Because the best next step feels simple when you are already overwhelmed by symptoms.",
+    number: "03",
+    title: "It handles sulfur burps at the source.",
     body:
-      "When your stomach feels off every day, you do not want another giant routine with powders, teas, and backup remedies. Motilli is easier for many women to consider because it is a gummy format built to fit into what they are already doing, while still focusing on the symptoms they are trying to get under control.",
+      "The rotten-egg taste is not random. When food lingers in a slow stomach, gut bacteria break it down and release hydrogen sulfide gas — which comes up as that burp you cough to cover. Motilli includes chlorophyllin specifically to bind that sulfur gas and neutralize the smell, while the apigenin works on the slowdown that is causing it in the first place. So you are not masking it. You are shutting off the thing producing it.",
+    icon: BadgeCheck,
+  },
+  {
+    number: "04",
+    title: "One gummy a day. Not another powder, tea, or pill routine.",
+    body:
+      "When your stomach already feels off every morning, the last thing you want is a five-step regimen with mixing, timing, and three bottles on the counter. Motilli is a single daily gummy designed to sit next to your coffee, not replace your kitchen. Women who have already tried the stack of fixes tell us this is the part that actually made them stick with it.",
+    quote:
+      '“I\'ve bought every supplement on the shelf. This is the one I actually remember to take.” — [verified review placeholder]',
     icon: CircleCheckBig,
   },
   {
     number: "05",
-    title: "Because women want something that lines up with their exact complaints, not a vague wellness promise.",
+    title: "The results build over weeks — not days. Here is what to expect.",
     body:
-      "If your real issue is bloating, sulfur burps, heaviness, and feeling like meals stop moving, broad 'digestive balance' language can feel useless. Motilli stands out because the positioning speaks directly to those specific complaints and the kind of motility support women are actively looking for.",
+      "Motilli is not a stimulant laxative. It is not supposed to hit in an hour. It works by helping your stomach do its job again, and that takes a little time.",
+    bullets: [
+      "Days 1–5: Most women feel nothing dramatic. That is normal.",
+      "Weeks 2–3: The first shifts — less heaviness after meals, fewer sulfur burps, easier mornings.",
+      "Month 2+: The change you actually wanted. Clothes fitting the way they did before the bloating. Eating out without planning your exit. Not thinking about your stomach for the first time in months.",
+    ],
+    after:
+      "The women who stick with it through the first two weeks are the ones leaving the reviews.",
     icon: TimerReset,
   },
   {
     number: "06",
-    title: "Because once the pattern makes sense, the next step feels a lot less like guessing.",
+    title: "90 days to try it. If it is not the fit, you get your money back.",
     body:
-      "Women coming off long-form copy are usually not looking for hype. They are trying to understand why they feel miserable and what sounds reasonable to try next. Motilli works better as that next step when each symptom points back to the same story: food feels slow, pressure builds, and support aimed at that pattern feels more believable.",
+      "You have already spent money on things that did not work. We know. That is why Motilli comes with a 90-day money-back guarantee — enough time to get through the slow start, past the first shifts, and into the weeks where the change actually shows up. If you are not feeling it by then, email us. You get a full refund. No forms, no restocking fee, no arguing.",
     icon: ShieldCheck,
   },
 ];
@@ -79,17 +88,17 @@ const reasons = [
 const supportPoints = [
   {
     title: "Helps get things moving",
-    text: "The goal is to support a stomach that feels slow, heavy, and backed up after meals.",
+    text: "Supports a stomach that feels slow, heavy, and backed up after meals.",
     icon: TimerReset,
   },
   {
     title: "Helps with sulfur burps",
-    text: "It is made for the exact symptom many women find hardest to talk about, but hardest to ignore.",
+    text: "Built for the exact symptom many women find hardest to talk about, but hardest to ignore.",
     icon: BadgeCheck,
   },
   {
     title: "Supports gentler digestion overall",
-    text: "Instead of feeling harsh or urgent, it is designed to feel like a smoother daily support product.",
+    text: "Designed to feel like a smoother daily support product, not a harsh urgent fix.",
     icon: Leaf,
   },
 ];
@@ -116,9 +125,7 @@ function SectionHeading({
           {title}
         </h2>
       </div>
-      <p className="max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-        {body}
-      </p>
+      <p className="max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">{body}</p>
     </div>
   );
 }
@@ -144,10 +151,10 @@ export default function Home() {
           </div>
 
           <a
-            href="#offer"
+            href="https://getmotilli.com/products/motilli-digestive-health-gummies"
             className="hidden rounded-full border border-primary/20 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[0_14px_30px_rgba(91,107,62,0.22)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(91,107,62,0.3)] md:inline-flex"
           >
-            See today’s offer
+            Continue to Motilli
           </a>
         </div>
       </header>
@@ -173,10 +180,13 @@ export default function Home() {
               <div className="max-w-4xl space-y-6">
                 <p className="editorial-kicker">If meals suddenly feel harder on GLP-1s</p>
                 <h1 className="font-display text-[clamp(3.15rem,6vw,6.55rem)] leading-[0.9] tracking-[-0.04em] text-foreground">
-                  6 reasons women on GLP-1s are turning to Motilli when the bloating and sulfur burps will not let up.
+                  6 reasons women are pairing Motilli with their GLP-1 — and ditching the laxatives
                 </h1>
-                <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-                  If you are scared to eat before errands, worried about that sour burping feeling coming back, or tired of feeling like food is just sitting in your stomach, you are not overreacting. A lot of women are reaching the point where they just want to feel safe eating, leaving the house, and trusting their stomach again. This is why more women are using Motilli alongside Ozempic, Wegovy, Mounjaro, and Zepbound.
+                <p className="max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
+                  If you are scared to eat before errands, dreading that sour-egg burp in the car, or lying in bed at night still feeling like dinner has not moved, you are not overreacting. That is a specific problem with a specific cause. And it is why a growing number of women on GLP-1s are reaching for Motilli instead of another laxative, probiotic, or magnesium pill that was never going to help.
+                </p>
+                <p className="text-base font-medium tracking-[0.01em] text-foreground/78 sm:text-lg">
+                  Here is what is different about it.
                 </p>
               </div>
 
@@ -185,7 +195,7 @@ export default function Home() {
                   href="#reasons"
                   className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[0_14px_30px_rgba(91,107,62,0.22)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(91,107,62,0.3)]"
                 >
-                  Jump to the 6 reasons <ArrowRight className="h-4 w-4" />
+                  Read the six reasons <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
 
@@ -204,18 +214,18 @@ export default function Home() {
               <div className="hidden gap-5 rounded-[2rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(238,235,224,0.72))] p-6 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:grid-cols-[1.18fr_0.82fr] sm:p-8 lg:grid">
                 <div>
                   <p className="text-[0.72rem] uppercase tracking-[0.26em] text-primary/80">
-                    What women keep saying
+                    Reason 04
                   </p>
                   <p className="mt-4 font-serifDisplay text-2xl leading-tight text-foreground sm:text-[2rem]">
-                    “I didn’t need another random probiotic. I needed something for the gross, heavy, stuck feeling that would not go away.”
+                    “I&apos;ve bought every supplement on the shelf. This is the one I actually remember to take.”
                   </p>
                   <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary">
-                      JM
+                      VR
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">Jessica M.</p>
-                      <p>Wegovy user, age 48</p>
+                      <p className="font-medium text-foreground">Verified review placeholder</p>
+                      <p>Daily Motilli user</p>
                     </div>
                   </div>
                 </div>
@@ -223,10 +233,10 @@ export default function Home() {
                 <div className="flex flex-col justify-between gap-5 rounded-[1.6rem] border border-primary/10 bg-[#f4efe4] p-5">
                   <div>
                     <p className="text-[0.72rem] uppercase tracking-[0.24em] text-muted-foreground">
-                      A simpler next step
+                      One gummy a day
                     </p>
                     <p className="mt-3 text-base leading-7 text-foreground">
-                      If you are tired of guessing and just want something that feels like a smart, manageable next step, this is where Motilli starts to make sense. It is a targeted digestive support gummy for the slow, full, gassy feeling that can come with GLP-1 medications.
+                      Not another powder, tea, or pill routine. Motilli is a single daily gummy designed to sit next to your coffee, not replace your kitchen.
                     </p>
                   </div>
                   <a
@@ -254,10 +264,10 @@ export default function Home() {
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(28,30,21,0.68)] via-[rgba(28,30,21,0.12)] to-transparent p-6 text-white">
                     <p className="text-[0.7rem] uppercase tracking-[0.26em] text-white/75">
-                      Real-life digestive support
+                      One gummy a day
                     </p>
                     <p className="mt-2 max-w-xs text-lg font-medium leading-7">
-                      For the days when you just want to eat normally and not think about your stomach for once.
+                      Not another powder, tea, or pill routine.
                     </p>
                   </div>
                 </div>
@@ -265,14 +275,19 @@ export default function Home() {
                 <div className="grid gap-5 p-6 sm:p-7">
                   <div className="rounded-[1.5rem] border border-primary/10 bg-[#f7f2e7] p-5">
                     <p className="text-[0.7rem] uppercase tracking-[0.24em] text-muted-foreground">
-                      Today’s price
+                      Current offer
                     </p>
+                    <div className="mt-2 flex items-center justify-between gap-3">
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-primary">
+                        Most popular
+                      </span>
+                    </div>
                     <div className="mt-4 flex items-end gap-3">
                       <span className="font-display text-5xl leading-none text-foreground">$29.99</span>
                       <span className="pb-2 text-sm text-muted-foreground line-through">$44.99</span>
                     </div>
                     <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                      Buy 2, get 1 free, with free shipping over $45.
+                      Buy 2, get 1 free. Free shipping over $45.
                     </p>
                   </div>
 
@@ -281,10 +296,10 @@ export default function Home() {
                       href="#offer"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-sm font-semibold text-primary-foreground shadow-[0_16px_36px_rgba(91,107,62,0.26)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(91,107,62,0.34)]"
                     >
-                      See the offer details <ArrowRight className="h-4 w-4" />
+                      Continue to Motilli <ArrowRight className="h-4 w-4" />
                     </a>
                     <p className="text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                      90-day guarantee · free shipping over $45
+                      90-day money-back guarantee
                     </p>
                   </div>
                 </div>
@@ -323,6 +338,29 @@ export default function Home() {
                   </div>
 
                   <p className="mt-6 text-base leading-8 text-muted-foreground">{reason.body}</p>
+
+                  {reason.bullets ? (
+                    <div className="mt-6 grid gap-3">
+                      {reason.bullets.map((bullet) => (
+                        <div
+                          key={bullet}
+                          className="rounded-[1.25rem] border border-black/6 bg-white/78 px-4 py-4 text-sm leading-6 text-foreground"
+                        >
+                          {bullet}
+                        </div>
+                      ))}
+                    </div>
+                  ) : null}
+
+                  {reason.after ? (
+                    <p className="mt-5 text-sm leading-7 text-foreground/78">{reason.after}</p>
+                  ) : null}
+
+                  {reason.quote ? (
+                    <blockquote className="mt-6 border-l border-primary/20 pl-4 font-serifDisplay text-2xl leading-tight text-foreground/88">
+                      {reason.quote}
+                    </blockquote>
+                  ) : null}
                 </motion.article>
               );
             })}
@@ -354,13 +392,11 @@ export default function Home() {
               transition={{ duration: 0.7, delay: 0.05 }}
               className="space-y-6"
             >
-              <p className="editorial-kicker">Why it can feel so intense</p>
-              <h2 className="font-display text-4xl leading-[0.96] tracking-tight text-foreground sm:text-5xl">
-                For a lot of women, the problem starts higher up than they thought.
-              </h2>
-              <p className="text-base leading-8 text-muted-foreground sm:text-lg">
-                GLP-1 medications help by slowing gastric emptying. That can also be why some women suddenly feel fuller for too long, burp up that rotten-egg taste, or feel like one meal is still there at bedtime. When that is the issue, random constipation fixes do not always touch the part that feels worst.
-              </p>
+              <SectionHeading
+                label="Why it can feel so intense"
+                title="For a lot of women, the problem starts higher up than they thought."
+                body="GLP-1 medications help by slowing gastric emptying. That can also be why some women suddenly feel fuller for too long, burp up that rotten-egg taste, or feel like one meal is still there at bedtime. When that is the issue, random constipation fixes do not always touch the part that feels worst."
+              />
 
               <div className="grid gap-4 sm:grid-cols-3">
                 {supportPoints.map((point) => {
@@ -406,10 +442,11 @@ export default function Home() {
               transition={{ duration: 0.65, delay: 0.05 }}
               className="rounded-[2rem] border border-black/6 bg-white/76 p-7 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:p-10"
             >
-              <p className="editorial-kicker">What is inside</p>
-              <h2 className="font-display text-4xl leading-[0.95] tracking-tight text-foreground sm:text-5xl">
-                The formula is meant to feel specific, not random.
-              </h2>
+              <SectionHeading
+                label="What’s inside"
+                title="The formula is built around three jobs, not a long ingredient list."
+                body=""
+              />
 
               <div className="mt-8 grid gap-5">
                 <div className="rounded-[1.6rem] border border-black/6 bg-[#faf7f1] p-5">
@@ -418,7 +455,7 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-foreground">Celery-derived apigenin</h3>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    Chosen for women who feel like food just sits there. It is there to support smoother stomach motility so the problem feels less mysterious and the next step feels more straightforward.
+                    The prokinetic behind Reason 01. Supports stomach motility so food does not sit and ferment.
                   </p>
                 </div>
 
@@ -428,7 +465,7 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-foreground">Chlorophyllin</h3>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    Included because sulfur burps are not a small problem when you are trying to work, travel, socialize, or simply sit near other people without worrying.
+                    The sulfur-gas binder behind Reason 03. Neutralizes the hydrogen sulfide that causes the rotten-egg burp.
                   </p>
                 </div>
 
@@ -438,7 +475,7 @@ export default function Home() {
                     <h3 className="text-xl font-semibold text-foreground">Gentle soluble fiber</h3>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    Added for steadier downstream support, so the formula feels more complete without leaning into harsh, urgent relief.
+                    Downstream support so the system keeps moving once the stomach does its job.
                   </p>
                 </div>
               </div>
@@ -502,7 +539,7 @@ export default function Home() {
                   If this sounds like what you have been dealing with, Motilli is worth trying.
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-                  Motilli supports stomach motility, helps with sulfur gas, and offers gentler digestive support in one easy gummy. It is for women who want something that matches what they are feeling and finally gives them a doable next step.
+                  Motilli supports stomach motility, helps with sulfur gas, and offers gentler digestive support in one daily gummy. It is for women who want something that matches what they are actually feeling — and gives them one clear thing to try.
                 </p>
               </div>
 
@@ -518,17 +555,17 @@ export default function Home() {
                   <span className="pb-2 text-sm text-muted-foreground line-through">$44.99</span>
                 </div>
                 <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                  Buy 2, get 1 free, with free shipping over $45.
+                  Buy 2, get 1 free. Free shipping over $45.
                 </p>
 
                 <div className="mt-6 grid gap-3">
                   <div className="flex items-start gap-3 rounded-[1.25rem] bg-white/80 px-4 py-4 text-sm leading-6 text-foreground">
                     <ShieldCheck className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                    90-day money-back guarantee if it is not the right fit for you.
+                    90-day money-back guarantee if it is not the right fit.
                   </div>
                   <div className="flex items-start gap-3 rounded-[1.25rem] bg-white/80 px-4 py-4 text-sm leading-6 text-foreground">
                     <Leaf className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                    Pectin-based gummies designed to feel easier than another capsule routine.
+                    Pectin-based gummies. No capsules, no powders.
                   </div>
                 </div>
 
