@@ -18,6 +18,7 @@ import {
 const heroImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-hero-editorial-2iSnfmPniKnQ9jC94ZNXZZ.webp";
 const dianeImage = "https://i.ibb.co/LhkR4xQ0/motilli-adv-review-diane-v2.jpg";
+const ctaOfferImage = "https://i.ibb.co/ynYJbNhB/motilli-celery-listicle-07-clean-label.jpg";
 const ingredientImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-ingredients-stilllife-hwA8gd3zNhJJxPNfA3NLSy.webp";
 const mechanismImage =
@@ -497,6 +498,13 @@ export default function Home() {
                   <span className="rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-primary">
                     Most popular
                   </span>
+                </div>
+                <div className="mt-4 overflow-hidden rounded-[1.5rem] border border-black/6 bg-white/80 shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
+                  <img
+                    src={ctaOfferImage}
+                    alt="Motilli clean-label editorial image"
+                    className="block h-auto w-full object-cover"
+                  />
                 </div>
                 <div className="mt-5 flex items-end gap-3">
                   <span className="font-display text-6xl leading-none text-foreground">$29.99</span>
