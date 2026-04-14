@@ -10,3 +10,7 @@
 - [ ] Reduce pre-reasons mobile content aggressively so users do not have to scroll through image, price box, testimonial, and explainer copy before seeing the six reasons.
 - [ ] Reorder the mobile layout so the six reasons begin immediately after a minimal headline and short setup paragraph.
 - [ ] Remove or push lower any non-essential pre-reasons modules on mobile, including testimonial, price card, and extra reassurance blocks.
+- [ ] Remove the extra pre-reasons explainer block shown above the six reasons because it adds friction.
+- [ ] Rewrite each of the six reasons so it follows a clear problem-to-handling structure using customer language.
+- [ ] Make each reason explicitly explain what the reader is experiencing, why that issue matters, and how Motilli is meant to help with that specific problem.
+- [ ] Strengthen the listicle argument so it reads like cause and effect rather than a loose set of observations.

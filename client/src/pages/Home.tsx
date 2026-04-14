@@ -34,44 +34,44 @@ const quickFacts = [
 const reasons = [
   {
     number: "01",
-    title: "Because the bloating does not feel normal — and you know it.",
+    title: "Because that hard, swollen, food-is-just-sitting-there feeling usually means you need support higher up.",
     body:
-      "This is not the usual 'I ate too much' kind of bloat. It is the hard, stuck, stretched feeling that can make one meal feel like it is still sitting there hours later.",
+      "When bloating feels tight, heavy, and stuck for hours after you eat, a lot of women realize this is not regular overeating bloat. Motilli is meant to support stomach motility, which is why it feels more relevant to women dealing with that slow, backed-up feeling after GLP-1 meals.",
     icon: Sparkles,
   },
   {
     number: "02",
-    title: "Because sulfur burps can make you dread being around other people.",
+    title: "Because sulfur burps are not just gross — they are often a sign food is lingering too long.",
     body:
-      "A lot of women are not just uncomfortable. They are embarrassed, anxious, and quietly planning their day around what might happen after they eat.",
+      "That sour, rotten-egg burping can leave women embarrassed, anxious, and scared to eat before errands or social plans. Motilli is used here because it is positioned around the slow-digestion pattern women blame for that symptom, not just around generic gut support.",
     icon: BadgeCheck,
   },
   {
     number: "03",
-    title: "Because laxatives and random probiotics are missing the real issue.",
+    title: "Because if the problem starts in the stomach, random bathroom fixes may not touch the part that feels worst.",
     body:
-      "When food is sitting too long in the stomach, working only 'downstream' often does not solve the heavy, sour, trapped feeling at the top.",
+      "A lot of women try laxatives, magnesium, or a probiotic and still feel painfully full up top. That is exactly where Motilli enters the conversation: as a more targeted digestive support option for the heavy, stalled feeling that seems to begin before food moves through the rest of the system.",
     icon: Waves,
   },
   {
     number: "04",
-    title: "Because you want relief without adding one more miserable routine.",
+    title: "Because the best next step feels simple when you are already overwhelmed by symptoms.",
     body:
-      "If you are already taking injections, supplements, powders, and backup remedies, the last thing you want is another complicated gut-health experiment.",
+      "When your stomach feels off every day, you do not want another giant routine with powders, teas, and backup remedies. Motilli is easier for many women to consider because it is a gummy format built to fit into what they are already doing, while still focusing on the symptoms they are trying to get under control.",
     icon: CircleCheckBig,
   },
   {
     number: "05",
-    title: "Because the formula is built around what women actually complain about.",
+    title: "Because women want something that lines up with their exact complaints, not a vague wellness promise.",
     body:
-      "The focus is stomach motility, sulfur gas, and gentler movement — not a vague promise to 'support overall wellness.'",
+      "If your real issue is bloating, sulfur burps, heaviness, and feeling like meals stop moving, broad 'digestive balance' language can feel useless. Motilli stands out because the positioning speaks directly to those specific complaints and the kind of motility support women are actively looking for.",
     icon: TimerReset,
   },
   {
     number: "06",
-    title: "Because once you understand what is happening, Motilli makes sense fast.",
+    title: "Because once the pattern makes sense, the next step feels a lot less like guessing.",
     body:
-      "Women are not looking for hype. They are looking for something that fits what they are feeling and gives them a simple next step that does not feel reckless.",
+      "Women coming off long-form copy are usually not looking for hype. They are trying to understand why they feel miserable and what sounds reasonable to try next. Motilli works better as that next step when each symptom points back to the same story: food feels slow, pressure builds, and support aimed at that pattern feels more believable.",
     icon: ShieldCheck,
   },
 ];
@@ -294,13 +294,7 @@ export default function Home() {
         </section>
 
         <section id="reasons" className="container py-8 sm:py-12 lg:py-14">
-          <SectionHeading
-            label="Why women are making the switch"
-            title="Here is why Motilli is standing out for women who feel bloated, full, gassy, and fed up on GLP-1s."
-            body="If you are tired of guessing and want something that feels believable, specific, and easy to add to your routine, these are the reasons women say Motilli starts to make sense quickly."
-          />
-
-          <div className="mt-10 grid gap-5 lg:grid-cols-2">
+          <div className="grid gap-5 lg:grid-cols-2">
             {reasons.map((reason, index) => {
               const Icon = reason.icon;
               return (
