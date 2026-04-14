@@ -488,7 +488,7 @@ export default function Home() {
                 </div>
 
                 <a
-                  href="https://getmotilli.com/products/motilli-digestive-health-gummies"
+                  href="https://getmotilli.com/"
                   className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-sm font-semibold text-primary-foreground shadow-[0_16px_36px_rgba(91,107,62,0.24)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(91,107,62,0.32)]"
                 >
                   Continue to Motilli <ArrowRight className="h-4 w-4" />
