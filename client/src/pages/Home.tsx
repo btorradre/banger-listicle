@@ -20,11 +20,9 @@ const heroImage =
 const dianeImage = "https://i.ibb.co/LhkR4xQ0/motilli-adv-review-diane-v2.jpg";
 const ctaOfferImage = "https://i.ibb.co/ynYJbNhB/motilli-celery-listicle-07-clean-label.jpg";
 const ingredientImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-ingredients-stilllife-hwA8gd3zNhJJxPNfA3NLSy.webp";
+  "https://www.getmotilli.com/cdn/shop/files/2_1060x.webp?v=1774815691";
 const mechanismImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-mechanism-diagram-art-XEVgHLPeUPBRWfVCwpNqgr.webp";
-const dinnerImage =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-testimonial-dinner-aKDmomhrew7jgndmwdrDNf.webp";
 
 const quickFacts = [
   "For women using Ozempic, Wegovy, Mounjaro, or Zepbound",
@@ -159,7 +157,7 @@ export default function Home() {
                   Women’s health editorial
                 </span>
                 <span>Posted February 10, 2026</span>
-                <span>7-minute read</span>
+                <span>2-minute read</span>
               </div>
 
               <div className="max-w-4xl space-y-6">
@@ -433,7 +431,7 @@ export default function Home() {
         </section>
 
         <section className="container py-10 sm:py-16 lg:py-20">
-          <div className="grid gap-8 lg:grid-cols-[1.08fr_0.92fr] lg:items-center">
+          <div className="max-w-4xl">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -455,20 +453,6 @@ export default function Home() {
               </blockquote>
             </motion.div>
 
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={fadeIn}
-              transition={{ duration: 0.65, delay: 0.06 }}
-              className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#2f3725] shadow-[0_28px_80px_rgba(39,43,28,0.14)]"
-            >
-              <img
-                src={dinnerImage}
-                alt="Two women enjoying dinner comfortably and confidently in a warm restaurant"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
           </div>
         </section>
 
