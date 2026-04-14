@@ -18,3 +18,12 @@
 - [ ] Preserve the current layout and components where possible while swapping in the new headline, hook, six reasons, ingredient copy, proof copy, and offer copy.
 - [ ] Verify the updated copy still renders cleanly across the page and compiles without errors.
 - [ ] Change the verified review placeholder name to Monica M.
+- [ ] Remove the announcement bar at the top of the page.
+- [ ] Place the Diane review image directly below the main headline.
+- [ ] Replace the image for reason 1 with https://l2.guthealthblog.org/r1.jpeg.
+- [ ] Replace the image for reason 2 with https://i.ibb.co/7dzY12Lw/stomach-vs-colon.jpg.
+- [ ] Replace the image for reason 3 with https://l2.guthealthblog.org/r3.jpeg.
+- [ ] Replace the image for reason 4 with https://l2.guthealthblog.org/r5.jpeg.
+- [ ] Replace the image for reason 5 with https://www.getmotilli.com/cdn/shop/files/3_1060x.webp?v=1774815691.
+- [ ] Replace the image for reason 6 with https://i.ibb.co/b5pNgwPS/guarantee-badge.jpg.
+- [ ] Remove the section that starts with the digestive diagram and the headline about the problem starting higher up.

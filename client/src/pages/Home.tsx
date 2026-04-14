@@ -368,56 +368,6 @@ export default function Home() {
         </section>
 
         <section className="container py-10 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeIn}
-              transition={{ duration: 0.7 }}
-              className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#f5f0e7] shadow-[0_24px_70px_rgba(39,43,28,0.08)]"
-            >
-              <img
-                src={mechanismImage}
-                alt="Illustrated diagram showing the stomach as the key place where GLP-1 digestive slowdown begins"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeIn}
-              transition={{ duration: 0.7, delay: 0.05 }}
-              className="space-y-6"
-            >
-              <SectionHeading
-                label="Why it can feel so intense"
-                title="For a lot of women, the problem starts higher up than they thought."
-                body="GLP-1 medications help by slowing gastric emptying. That can also be why some women suddenly feel fuller for too long, burp up that rotten-egg taste, or feel like one meal is still there at bedtime. When that is the issue, random constipation fixes do not always touch the part that feels worst."
-              />
-
-              <div className="grid gap-4 sm:grid-cols-3">
-                {supportPoints.map((point) => {
-                  const Icon = point.icon;
-                  return (
-                    <div
-                      key={point.title}
-                      className="rounded-[1.6rem] border border-black/6 bg-white/72 p-5 shadow-[0_18px_44px_rgba(39,43,28,0.06)]"
-                    >
-                      <Icon className="h-5 w-5 text-primary" />
-                      <h3 className="mt-4 text-lg font-semibold text-foreground">{point.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{point.text}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <section className="container py-10 sm:py-16">
           <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-stretch">
             <motion.div
               initial="hidden"
