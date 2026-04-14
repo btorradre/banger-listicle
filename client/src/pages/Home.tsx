@@ -17,6 +17,7 @@ import {
 
 const heroImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-hero-editorial-2iSnfmPniKnQ9jC94ZNXZZ.webp";
+const dianeImage = "https://i.ibb.co/LhkR4xQ0/motilli-adv-review-diane-v2.jpg";
 const ingredientImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-ingredients-stilllife-hwA8gd3zNhJJxPNfA3NLSy.webp";
 const mechanismImage =
@@ -38,6 +39,7 @@ const reasons = [
     body:
       "Most GLP-1 bloating is not a colon problem. It is a stomach problem. GLP-1 medications slow gastric emptying, which means food sits in the stomach longer, ferments, and produces the pressure, gas, and sulfur burps women describe as feeling stuck up high. Motilli’s lead ingredient is apigenin from celery juice extract — a natural prokinetic that helps wake up stomach motility so food keeps moving the way it is supposed to. That is why it feels different from anything that works on the colon.",
     icon: Sparkles,
+    image: "https://l2.guthealthblog.org/r1.jpeg",
   },
   {
     number: "02",
@@ -45,6 +47,7 @@ const reasons = [
     body:
       "Miralax, Dulcolax, magnesium citrate, psyllium husk, probiotics — every one of them works in the colon, six feet downstream from where a GLP-1 is actually slowing you down. That is why you can take all of them and still feel painfully full up top. Motilli is built for the stomach itself, which is why it fits the one spot the rest of your cabinet does not cover.",
     icon: Waves,
+    image: "https://i.ibb.co/7dzY12Lw/stomach-vs-colon.jpg",
   },
   {
     number: "03",
@@ -52,6 +55,7 @@ const reasons = [
     body:
       "The rotten-egg taste is not random. When food lingers in a slow stomach, gut bacteria break it down and release hydrogen sulfide gas — which comes up as that burp you cough to cover. Motilli includes chlorophyllin specifically to bind that sulfur gas and neutralize the smell, while the apigenin works on the slowdown that is causing it in the first place. So you are not masking it. You are shutting off the thing producing it.",
     icon: BadgeCheck,
+    image: "https://l2.guthealthblog.org/r3.jpeg",
   },
   {
     number: "04",
@@ -61,6 +65,7 @@ const reasons = [
     quote:
       '“I\'ve bought every supplement on the shelf. This is the one I actually remember to take.” — [verified review placeholder]',
     icon: CircleCheckBig,
+    image: "https://l2.guthealthblog.org/r5.jpeg",
   },
   {
     number: "05",
@@ -75,6 +80,7 @@ const reasons = [
     after:
       "The women who stick with it through the first two weeks are the ones leaving the reviews.",
     icon: TimerReset,
+    image: "https://www.getmotilli.com/cdn/shop/files/3_1060x.webp?v=1774815691",
   },
   {
     number: "06",
@@ -82,6 +88,7 @@ const reasons = [
     body:
       "You have already spent money on things that did not work. We know. That is why Motilli comes with a 90-day money-back guarantee — enough time to get through the slow start, past the first shifts, and into the weeks where the change actually shows up. If you are not feeling it by then, email us. You get a full refund. No forms, no restocking fee, no arguing.",
     icon: ShieldCheck,
+    image: "https://i.ibb.co/b5pNgwPS/guarantee-badge.jpg",
   },
 ];
 
@@ -136,29 +143,6 @@ export default function Home() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(119,138,88,0.16),transparent_34%),radial-gradient(circle_at_85%_14%,rgba(186,153,91,0.14),transparent_22%),linear-gradient(to_bottom,rgba(255,255,255,0.18),transparent_24%)]" />
       <div className="pointer-events-none absolute inset-0 opacity-[0.18] mix-blend-multiply grain-texture" />
 
-      <header className="sticky top-0 z-30 border-b border-black/5 bg-[rgba(249,245,238,0.82)] backdrop-blur-xl">
-        <div className="container flex items-center justify-between gap-6 py-4">
-          <div className="flex items-center gap-3 text-sm text-muted-foreground">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-black/10 bg-white/70 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-foreground shadow-[0_10px_30px_rgba(30,30,20,0.06)]">
-              GH
-            </span>
-            <div>
-              <p className="text-[0.68rem] uppercase tracking-[0.26em] text-muted-foreground/80">
-                Women’s GLP-1 Digestive Relief
-              </p>
-              <p className="text-sm font-medium text-foreground">Gut Health Journal</p>
-            </div>
-          </div>
-
-          <a
-            href="https://getmotilli.com/products/motilli-digestive-health-gummies"
-            className="hidden rounded-full border border-primary/20 bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[0_14px_30px_rgba(91,107,62,0.22)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(91,107,62,0.3)] md:inline-flex"
-          >
-            Continue to Motilli
-          </a>
-        </div>
-      </header>
-
       <main>
         <section className="container relative py-8 sm:py-12 lg:py-16">
           <div className="grid gap-10 lg:grid-cols-[1.08fr_0.72fr] lg:items-start">
@@ -182,6 +166,13 @@ export default function Home() {
                 <h1 className="font-display text-[clamp(3.15rem,6vw,6.55rem)] leading-[0.9] tracking-[-0.04em] text-foreground">
                   6 reasons women are pairing Motilli with their GLP-1 — and ditching the laxatives
                 </h1>
+                <div className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#efe7d9] shadow-[0_24px_70px_rgba(39,43,28,0.1)]">
+                  <img
+                    src={dianeImage}
+                    alt="Editorial-style image of a woman holding Motilli gummies"
+                    className="block h-auto w-full object-cover"
+                  />
+                </div>
                 <p className="max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
                   If you are scared to eat before errands, dreading that sour-egg burp in the car, or lying in bed at night still feeling like dinner has not moved, you are not overreacting. That is a specific problem with a specific cause. And it is why a growing number of women on GLP-1s are reaching for Motilli instead of another laxative, probiotic, or magnesium pill that was never going to help.
                 </p>
@@ -323,6 +314,13 @@ export default function Home() {
                   className="group relative overflow-hidden rounded-[2rem] border border-black/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(246,240,231,0.88))] p-6 shadow-[0_22px_54px_rgba(39,43,28,0.08)] sm:p-8"
                 >
                   <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-primary/35 to-transparent" />
+                  <div className="mb-6 overflow-hidden rounded-[1.6rem] border border-black/6 bg-[#efe7d9] shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
+                    <img
+                      src={reason.image}
+                      alt={`Reason ${reason.number} supporting image`}
+                      className="h-56 w-full object-cover sm:h-64"
+                    />
+                  </div>
                   <div className="flex items-start justify-between gap-6">
                     <div className="space-y-4">
                       <span className="inline-flex rounded-full border border-primary/15 bg-primary/10 px-3 py-1 text-[0.72rem] font-semibold uppercase tracking-[0.24em] text-primary">
