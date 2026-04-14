@@ -158,11 +158,11 @@ export default function Home() {
                 <h1 className="font-display text-[clamp(3.15rem,6vw,6.55rem)] leading-[0.9] tracking-[-0.04em] text-foreground">
                   6 reasons women are pairing Motilli with their GLP-1 — and ditching the laxatives
                 </h1>
-                <div className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#efe7d9] shadow-[0_24px_70px_rgba(39,43,28,0.1)]">
+                <div className="shadow-[0_24px_70px_rgba(39,43,28,0.1)]">
                   <img
                     src={dianeImage}
                     alt="Editorial-style image of a woman holding Motilli gummies"
-                    className="block h-auto w-full object-cover"
+                    className="block h-auto w-full rounded-[2rem] object-cover"
                   />
                 </div>
                 <p className="max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
@@ -224,11 +224,11 @@ export default function Home() {
               className="hidden lg:sticky lg:top-28 lg:block"
             >
               <div className="overflow-hidden rounded-[2rem] border border-black/6 bg-white/80 shadow-[0_28px_80px_rgba(39,43,28,0.12)] backdrop-blur">
-                <div className="relative overflow-hidden bg-[#ebe4d8]">
+                <div className="relative overflow-hidden">
                   <img
                     src={heroImage}
                     alt="Woman holding a green supplement gummy in a softly lit kitchen"
-                    className="block h-auto w-full object-contain"
+                    className="block h-auto w-full rounded-[2rem] object-contain"
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(28,30,21,0.68)] via-[rgba(28,30,21,0.12)] to-transparent p-6 text-white">
                     <p className="text-[0.7rem] uppercase tracking-[0.26em] text-white/75">
@@ -291,11 +291,11 @@ export default function Home() {
                   className="group relative overflow-hidden rounded-[2rem] border border-black/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(246,240,231,0.88))] p-6 shadow-[0_22px_54px_rgba(39,43,28,0.08)] sm:p-8"
                 >
                   <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-primary/35 to-transparent" />
-                  <div className="mb-6 overflow-hidden rounded-[1.6rem] border border-black/6 bg-[#efe7d9] p-2 shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
+                  <div className="mb-6 shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
                     <img
                       src={reason.image}
                       alt={`Reason ${reason.number} supporting image`}
-                      className="block h-auto max-h-[26rem] w-full rounded-[1.15rem] object-contain"
+                      className="block h-auto max-h-[26rem] w-full rounded-[1.6rem] object-contain"
                     />
                   </div>
                   <div className="flex items-start justify-between gap-6">
@@ -350,12 +350,12 @@ export default function Home() {
               viewport={{ once: true, amount: 0.2 }}
               variants={fadeIn}
               transition={{ duration: 0.65 }}
-              className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#eadfcd] shadow-[0_24px_70px_rgba(39,43,28,0.09)]"
+              className="shadow-[0_24px_70px_rgba(39,43,28,0.09)]"
             >
               <img
                 src={ingredientImage}
                 alt="Botanical still life featuring celery, green gummies, and supporting digestive ingredients"
-                className="block h-auto w-full object-contain"
+                className="block h-auto w-full rounded-[2rem] object-contain"
               />
             </motion.div>
 
@@ -461,11 +461,11 @@ export default function Home() {
                     Most popular
                   </span>
                 </div>
-                <div className="mt-4 overflow-hidden rounded-[1.5rem] border border-black/6 bg-white/80 shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
+                <div className="mt-4 shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
                   <img
                     src={ctaOfferImage}
                     alt="Motilli clean-label editorial image"
-                    className="block h-auto w-full object-cover"
+                    className="block h-auto w-full rounded-[1.5rem] object-cover"
                   />
                 </div>
                 <div className="mt-5 flex items-end gap-3">
