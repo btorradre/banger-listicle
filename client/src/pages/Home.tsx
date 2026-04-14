@@ -24,13 +24,6 @@ const ingredientImage =
 const mechanismImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-mechanism-diagram-art-XEVgHLPeUPBRWfVCwpNqgr.webp";
 
-const quickFacts = [
-  "For women using Ozempic, Wegovy, Mounjaro, or Zepbound",
-  "90-day money-back guarantee",
-  "Pectin-based gummies. No capsules, no powders.",
-  "Buy 2, get 1 free. Free shipping over $45.",
-];
-
 const reasons = [
   {
     number: "01",
@@ -175,9 +168,6 @@ export default function Home() {
                 <p className="max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
                   If you are scared to eat before errands, dreading that sour-egg burp in the car, or lying in bed at night still feeling like dinner has not moved, you are not overreacting. That is a specific problem with a specific cause. And it is why a growing number of women on GLP-1s are reaching for Motilli instead of another laxative, probiotic, or magnesium pill that was never going to help.
                 </p>
-                <p className="text-base font-medium tracking-[0.01em] text-foreground/78 sm:text-lg">
-                  Here is what is different about it.
-                </p>
               </div>
 
               <div className="flex flex-wrap gap-3 sm:hidden">
@@ -187,18 +177,6 @@ export default function Home() {
                 >
                   Read the six reasons <ArrowRight className="h-4 w-4" />
                 </a>
-              </div>
-
-              <div className="hidden gap-4 sm:grid sm:grid-cols-2 xl:grid-cols-4">
-                {quickFacts.map((fact) => (
-                  <div
-                    key={fact}
-                    className="rounded-[1.75rem] border border-black/6 bg-white/74 px-4 py-4 text-sm leading-6 text-foreground shadow-[0_18px_50px_rgba(39,43,28,0.06)] backdrop-blur"
-                  >
-                    <CircleCheckBig className="mb-3 h-4 w-4 text-primary" />
-                    {fact}
-                  </div>
-                ))}
               </div>
 
               <div className="hidden gap-5 rounded-[2rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(238,235,224,0.72))] p-6 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:grid-cols-[1.18fr_0.82fr] sm:p-8 lg:grid">
@@ -246,11 +224,11 @@ export default function Home() {
               className="hidden lg:sticky lg:top-28 lg:block"
             >
               <div className="overflow-hidden rounded-[2rem] border border-black/6 bg-white/80 shadow-[0_28px_80px_rgba(39,43,28,0.12)] backdrop-blur">
-                <div className="relative aspect-[4/5] overflow-hidden bg-[#ebe4d8]">
+                <div className="relative overflow-hidden bg-[#ebe4d8]">
                   <img
                     src={heroImage}
                     alt="Woman holding a green supplement gummy in a softly lit kitchen"
-                    className="h-full w-full object-cover"
+                    className="block h-auto w-full object-contain"
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(28,30,21,0.68)] via-[rgba(28,30,21,0.12)] to-transparent p-6 text-white">
                     <p className="text-[0.7rem] uppercase tracking-[0.26em] text-white/75">
@@ -313,11 +291,11 @@ export default function Home() {
                   className="group relative overflow-hidden rounded-[2rem] border border-black/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.88),rgba(246,240,231,0.88))] p-6 shadow-[0_22px_54px_rgba(39,43,28,0.08)] sm:p-8"
                 >
                   <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-primary/35 to-transparent" />
-                  <div className="mb-6 overflow-hidden rounded-[1.6rem] border border-black/6 bg-[#efe7d9] shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
+                  <div className="mb-6 overflow-hidden rounded-[1.6rem] border border-black/6 bg-[#efe7d9] p-2 shadow-[0_16px_36px_rgba(39,43,28,0.08)]">
                     <img
                       src={reason.image}
                       alt={`Reason ${reason.number} supporting image`}
-                      className="h-56 w-full object-cover sm:h-64"
+                      className="block h-auto max-h-[26rem] w-full rounded-[1.15rem] object-contain"
                     />
                   </div>
                   <div className="flex items-start justify-between gap-6">
@@ -377,7 +355,7 @@ export default function Home() {
               <img
                 src={ingredientImage}
                 alt="Botanical still life featuring celery, green gummies, and supporting digestive ingredients"
-                className="h-full w-full object-cover"
+                className="block h-auto w-full object-contain"
               />
             </motion.div>
 
