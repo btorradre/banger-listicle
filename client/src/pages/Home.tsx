@@ -180,7 +180,16 @@ export default function Home() {
                 </p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="flex flex-wrap gap-3 sm:hidden">
+                <a
+                  href="#reasons"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-[0_14px_30px_rgba(91,107,62,0.22)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(91,107,62,0.3)]"
+                >
+                  Jump to the 6 reasons <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+
+              <div className="hidden gap-4 sm:grid sm:grid-cols-2 xl:grid-cols-4">
                 {quickFacts.map((fact) => (
                   <div
                     key={fact}
@@ -192,7 +201,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="grid gap-5 rounded-[2rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(238,235,224,0.72))] p-6 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:grid-cols-[1.18fr_0.82fr] sm:p-8">
+              <div className="hidden gap-5 rounded-[2rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(238,235,224,0.72))] p-6 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:grid-cols-[1.18fr_0.82fr] sm:p-8 lg:grid">
                 <div>
                   <p className="text-[0.72rem] uppercase tracking-[0.26em] text-primary/80">
                     What women keep saying
@@ -234,7 +243,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 28 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-              className="lg:sticky lg:top-28"
+              className="hidden lg:sticky lg:top-28 lg:block"
             >
               <div className="overflow-hidden rounded-[2rem] border border-black/6 bg-white/80 shadow-[0_28px_80px_rgba(39,43,28,0.12)] backdrop-blur">
                 <div className="relative aspect-[4/5] overflow-hidden bg-[#ebe4d8]">

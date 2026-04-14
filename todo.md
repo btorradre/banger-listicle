@@ -7,3 +7,6 @@
 - [ ] Use the provided consciousness map to infer the visitor’s state coming off the long-form copy and reflect that state in the page tone.
 - [ ] Rewrite early page sections so they meet the visitor where she is emotionally, then move her toward relief, trust, and action.
 - [ ] Ensure the six reasons appear much earlier in the reading flow and use customer-recognizable symptom language.
+- [ ] Reduce pre-reasons mobile content aggressively so users do not have to scroll through image, price box, testimonial, and explainer copy before seeing the six reasons.
+- [ ] Reorder the mobile layout so the six reasons begin immediately after a minimal headline and short setup paragraph.
+- [ ] Remove or push lower any non-essential pre-reasons modules on mobile, including testimonial, price card, and extra reassurance blocks.
