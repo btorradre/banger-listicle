@@ -224,7 +224,7 @@ export default function Home() {
                       VR
                     </div>
                     <div>
-                      <p className="font-medium text-foreground">Verified review placeholder</p>
+                      <p className="font-medium text-foreground">Monica M.</p>
                       <p>Daily Motilli user</p>
                     </div>
                   </div>

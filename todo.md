@@ -17,3 +17,4 @@
 - [ ] Replace the page copy with the user-provided copy from pasted_content_2.txt.
 - [ ] Preserve the current layout and components where possible while swapping in the new headline, hook, six reasons, ingredient copy, proof copy, and offer copy.
 - [ ] Verify the updated copy still renders cleanly across the page and compiles without errors.
+- [ ] Change the verified review placeholder name to Monica M.
