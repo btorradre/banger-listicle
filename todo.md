@@ -1,0 +1,9 @@
+- [ ] Remove internal strategy language such as "Written in the voice of a support group feature" and any similar meta phrasing.
+- [ ] Remove internal framing labels such as "The bridge belief" and replace them with customer-facing section headings.
+- [ ] Move the core six reasons much higher on the page so visitors reach the main argument sooner.
+- [ ] Rewrite the page so every headline, label, and supporting line reads like customer-facing editorial copy rather than internal commentary.
+- [ ] Recheck the revised page flow in preview and confirm the reasons are visible significantly earlier.
+- [ ] Avoid internal strategy language entirely and write from the avatar’s voice and emotional point of view.
+- [ ] Use the provided consciousness map to infer the visitor’s state coming off the long-form copy and reflect that state in the page tone.
+- [ ] Rewrite early page sections so they meet the visitor where she is emotionally, then move her toward relief, trust, and action.
+- [ ] Ensure the six reasons appear much earlier in the reading flow and use customer-recognizable symptom language.

@@ -1,17 +1,14 @@
 /*
-Design philosophy for this page: contemporary feminine investigative feature.
-Every section should preserve belief-first storytelling, premium editorial pacing,
-and softer commerce so the bridge feels trustworthy before it asks for purchase.
+Page copy direction: customer-facing only.
+Use the reader's language, lead with symptom recognition,
+move quickly into the six reasons, and keep the tone reassuring and believable.
 */
 import { motion } from "framer-motion";
 import {
   ArrowRight,
   BadgeCheck,
-  BookOpenText,
   CircleCheckBig,
-  FlaskConical,
   Leaf,
-  Pill,
   ShieldCheck,
   Sparkles,
   TimerReset,
@@ -27,98 +24,74 @@ const mechanismImage =
 const dinnerImage =
   "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-testimonial-dinner-aKDmomhrew7jgndmwdrDNf.webp";
 
+const quickFacts = [
+  "For women using Ozempic, Wegovy, Mounjaro, or Zepbound",
+  "90-day money-back guarantee",
+  "Pectin-based gummy that feels easy to take",
+  "Made for bloating, sulfur burps, heaviness, and slow digestion",
+];
+
 const reasons = [
   {
     number: "01",
-    title: "Most women are treating the wrong organ.",
+    title: "Because the bloating does not feel normal — and you know it.",
     body:
-      "Miralax, stool softeners, and bulk fiber act downstream. But the earliest GLP-1 slowdown often starts in the stomach, where food lingers, ferments, and creates the exact heaviness women describe as a 'cement' feeling.",
-    points: [
-      "The bridge now explains the mechanism before the product pitch.",
-      "It positions Motilli as an upstream solution instead of a generic digestive supplement.",
-    ],
-    icon: Waves,
-  },
-  {
-    number: "02",
-    title: "The embarrassment is social, not just physical.",
-    body:
-      "Sulfur burps, meal anxiety, and bloating don’t stay in the bathroom. They show up at dinners, in fitted clothes, during travel, and in the quiet calculations women make all day to avoid feeling seen.",
-    points: [
-      "The copy now mirrors the real emotional tax of GLP-1 digestive issues.",
-      "That makes the page feel like a continuation of the ad rather than a reset.",
-    ],
+      "This is not the usual 'I ate too much' kind of bloat. It is the hard, stuck, stretched feeling that can make one meal feel like it is still sitting there hours later.",
     icon: Sparkles,
   },
   {
-    number: "03",
-    title: "Pill fatigue is part of the problem.",
+    number: "02",
+    title: "Because sulfur burps can make you dread being around other people.",
     body:
-      "Women already managing injections, vitamins, powders, and backup remedies do not want a 'stack.' They want one focused support product that feels specific, simple, and believable.",
-    points: [
-      "The offer is framed as reduction and clarity, not more complexity.",
-      "The page emphasizes one daily ritual instead of a kitchen-sink formula.",
-    ],
-    icon: Pill,
+      "A lot of women are not just uncomfortable. They are embarrassed, anxious, and quietly planning their day around what might happen after they eat.",
+    icon: BadgeCheck,
+  },
+  {
+    number: "03",
+    title: "Because laxatives and random probiotics are missing the real issue.",
+    body:
+      "When food is sitting too long in the stomach, working only 'downstream' often does not solve the heavy, sour, trapped feeling at the top.",
+    icon: Waves,
   },
   {
     number: "04",
-    title: "A bridge page must earn trust before asking for commitment.",
+    title: "Because you want relief without adding one more miserable routine.",
     body:
-      "Instead of sounding like a compressed promo article, this version slows down and builds a cleaner hierarchy: symptom validation first, mechanism second, ingredients third, and only then a gentle offer.",
-    points: [
-      "The CTA language is softer and more contextual.",
-      "Discount language supports the offer instead of dominating the page.",
-    ],
-    icon: BookOpenText,
+      "If you are already taking injections, supplements, powders, and backup remedies, the last thing you want is another complicated gut-health experiment.",
+    icon: CircleCheckBig,
   },
   {
     number: "05",
-    title: "Ingredients only matter when their role is obvious.",
+    title: "Because the formula is built around what women actually complain about.",
     body:
-      "Celery-derived apigenin, chlorophyllin, and soluble prebiotic fiber are more persuasive when each one is tied to a job the reader already understands: movement, gas neutralization, and gentler downstream flow.",
-    points: [
-      "This makes the formula feel intentional, not decorative.",
-      "It also reduces the gap between claim intensity and proof depth.",
-    ],
-    icon: FlaskConical,
+      "The focus is stomach motility, sulfur gas, and gentler movement — not a vague promise to 'support overall wellness.'",
+    icon: TimerReset,
   },
   {
     number: "06",
-    title: "The best bridge preserves belief all the way into the offer.",
+    title: "Because once you understand what is happening, Motilli makes sense fast.",
     body:
-      "By the time the reader sees the offer card, the page has already established why laxatives failed, why sulfur burps happen, and why a stomach-first support gummy feels rational instead of impulsive.",
-    points: [
-      "The result is a warmer handoff into the product page or checkout.",
-      "That is the real job of a bridge page: belief transfer, not just click transfer.",
-    ],
+      "Women are not looking for hype. They are looking for something that fits what they are feeling and gives them a simple next step that does not feel reckless.",
     icon: ShieldCheck,
   },
 ];
 
-const proofPillars = [
+const supportPoints = [
   {
-    title: "Motility support",
-    text: "A stomach-first explanation for why food starts to sit, ferment, and feel heavy on GLP-1s.",
+    title: "Helps get things moving",
+    text: "The goal is to support a stomach that feels slow, heavy, and backed up after meals.",
     icon: TimerReset,
   },
   {
-    title: "Sulfur gas control",
-    text: "The page ties embarrassment to a clear mechanism instead of vague 'gut health' language.",
+    title: "Helps with sulfur burps",
+    text: "It is made for the exact symptom many women find hardest to talk about, but hardest to ignore.",
     icon: BadgeCheck,
   },
   {
-    title: "Gentler downstream flow",
-    text: "The formula is framed as supportive and low-drama, not harsh or laxative-like.",
+    title: "Supports gentler digestion overall",
+    text: "Instead of feeling harsh or urgent, it is designed to feel like a smoother daily support product.",
     icon: Leaf,
   },
-];
-
-const quickFacts = [
-  "Designed for women using Ozempic, Wegovy, Mounjaro, or Zepbound",
-  "90-day money-back guarantee",
-  "Pectin-based gummy, easy on sensitive stomachs",
-  "Pairs with your medication without asking you to 'start over'",
 ];
 
 const fadeIn = {
@@ -164,7 +137,7 @@ export default function Home() {
             </span>
             <div>
               <p className="text-[0.68rem] uppercase tracking-[0.26em] text-muted-foreground/80">
-                GLP-1 Support Feature
+                Women’s GLP-1 Digestive Relief
               </p>
               <p className="text-sm font-medium text-foreground">Gut Health Journal</p>
             </div>
@@ -181,7 +154,7 @@ export default function Home() {
 
       <main>
         <section className="container relative py-8 sm:py-12 lg:py-16">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.72fr] lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[1.08fr_0.72fr] lg:items-start">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -198,12 +171,12 @@ export default function Home() {
               </div>
 
               <div className="max-w-4xl space-y-6">
-                <p className="editorial-kicker">Investigation</p>
-                <h1 className="font-display text-[clamp(3.2rem,6vw,6.8rem)] leading-[0.9] tracking-[-0.04em] text-foreground">
-                  6 reasons women on GLP-1s are pairing Motilli with their medication — and finally beating the bloat.
+                <p className="editorial-kicker">If meals suddenly feel harder on GLP-1s</p>
+                <h1 className="font-display text-[clamp(3.15rem,6vw,6.55rem)] leading-[0.9] tracking-[-0.04em] text-foreground">
+                  6 reasons women on GLP-1s are turning to Motilli when the bloating and sulfur burps will not let up.
                 </h1>
                 <p className="max-w-2xl text-lg leading-8 text-muted-foreground sm:text-xl">
-                  If you are still bloated after Ozempic, Wegovy, Mounjaro, or Zepbound, this page is designed to bridge one crucial belief: most remedies are working too far downstream. The real question is whether your stomach ever got moving again.
+                  If you are scared to eat before errands, worried about that sour burping feeling coming back, or tired of feeling like food is just sitting in your stomach, you are not overreacting. A lot of women are reaching the point where they just want to feel safe eating, leaving the house, and trusting their stomach again. This is why more women are using Motilli alongside Ozempic, Wegovy, Mounjaro, and Zepbound.
                 </p>
               </div>
 
@@ -219,13 +192,13 @@ export default function Home() {
                 ))}
               </div>
 
-              <div className="grid gap-5 rounded-[2rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(238,235,224,0.72))] p-6 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:grid-cols-[1.2fr_0.8fr] sm:p-8">
+              <div className="grid gap-5 rounded-[2rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,255,255,0.82),rgba(238,235,224,0.72))] p-6 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:grid-cols-[1.18fr_0.82fr] sm:p-8">
                 <div>
                   <p className="text-[0.72rem] uppercase tracking-[0.26em] text-primary/80">
-                    Written in the voice of a support-group feature
+                    What women keep saying
                   </p>
                   <p className="mt-4 font-serifDisplay text-2xl leading-tight text-foreground sm:text-[2rem]">
-                    “I didn’t need another random probiotic. I needed something that made sense of why everything else failed.”
+                    “I didn’t need another random probiotic. I needed something for the gross, heavy, stuck feeling that would not go away.”
                   </p>
                   <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full border border-primary/20 bg-primary/10 text-primary">
@@ -233,7 +206,7 @@ export default function Home() {
                     </div>
                     <div>
                       <p className="font-medium text-foreground">Jessica M.</p>
-                      <p>GLP-1 support group contributor</p>
+                      <p>Wegovy user, age 48</p>
                     </div>
                   </div>
                 </div>
@@ -241,10 +214,10 @@ export default function Home() {
                 <div className="flex flex-col justify-between gap-5 rounded-[1.6rem] border border-primary/10 bg-[#f4efe4] p-5">
                   <div>
                     <p className="text-[0.72rem] uppercase tracking-[0.24em] text-muted-foreground">
-                      Why this version converts better
+                      A simpler next step
                     </p>
                     <p className="mt-3 text-base leading-7 text-foreground">
-                      It preserves the story, explains the mechanism, and only then introduces the offer — which is exactly what cold paid traffic needs from a bridge.
+                      If you are tired of guessing and just want something that feels like a smart, manageable next step, this is where Motilli starts to make sense. It is a targeted digestive support gummy for the slow, full, gassy feeling that can come with GLP-1 medications.
                     </p>
                   </div>
                   <a
@@ -272,10 +245,10 @@ export default function Home() {
                   />
                   <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[rgba(28,30,21,0.68)] via-[rgba(28,30,21,0.12)] to-transparent p-6 text-white">
                     <p className="text-[0.7rem] uppercase tracking-[0.26em] text-white/75">
-                      Editorial companion piece
+                      Real-life digestive support
                     </p>
                     <p className="mt-2 max-w-xs text-lg font-medium leading-7">
-                      A softer, belief-first path from symptom recognition to a credible solution.
+                      For the days when you just want to eat normally and not think about your stomach for once.
                     </p>
                   </div>
                 </div>
@@ -283,14 +256,14 @@ export default function Home() {
                 <div className="grid gap-5 p-6 sm:p-7">
                   <div className="rounded-[1.5rem] border border-primary/10 bg-[#f7f2e7] p-5">
                     <p className="text-[0.7rem] uppercase tracking-[0.24em] text-muted-foreground">
-                      Today’s supported offer
+                      Today’s price
                     </p>
                     <div className="mt-4 flex items-end gap-3">
                       <span className="font-display text-5xl leading-none text-foreground">$29.99</span>
                       <span className="pb-2 text-sm text-muted-foreground line-through">$44.99</span>
                     </div>
                     <p className="mt-3 text-sm leading-6 text-muted-foreground">
-                      A premium bridge should not hide the offer. It should simply wait until the explanation earns it.
+                      Buy 2, get 1 free, with free shipping over $45.
                     </p>
                   </div>
 
@@ -299,7 +272,7 @@ export default function Home() {
                       href="#offer"
                       className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-4 text-sm font-semibold text-primary-foreground shadow-[0_16px_36px_rgba(91,107,62,0.26)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_44px_rgba(91,107,62,0.34)]"
                     >
-                      Read the offer details <ArrowRight className="h-4 w-4" />
+                      See the offer details <ArrowRight className="h-4 w-4" />
                     </a>
                     <p className="text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
                       90-day guarantee · free shipping over $45
@@ -311,63 +284,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container py-10 sm:py-16">
-          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeIn}
-              transition={{ duration: 0.7 }}
-              className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#f5f0e7] shadow-[0_24px_70px_rgba(39,43,28,0.08)]"
-            >
-              <img
-                src={mechanismImage}
-                alt="Illustrated diagram showing the stomach as the key place where GLP-1 digestive slowdown begins"
-                className="h-full w-full object-cover"
-              />
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              variants={fadeIn}
-              transition={{ duration: 0.7, delay: 0.05 }}
-              className="space-y-6"
-            >
-              <p className="editorial-kicker">The bridge belief</p>
-              <h2 className="font-display text-4xl leading-[0.96] tracking-tight text-foreground sm:text-5xl">
-                Your stomach slowed down. Most of what you tried was working on the wrong end.
-              </h2>
-              <p className="text-base leading-8 text-muted-foreground sm:text-lg">
-                GLP-1 medication helps by slowing gastric emptying. That is part of the benefit. But for some women, the slowdown becomes the source of bloating, sulfur burps, heaviness, and meals that seem to sit for hours. That is why this bridge page leads with mechanism instead of hype.
-              </p>
-
-              <div className="grid gap-4 sm:grid-cols-3">
-                {proofPillars.map((pillar) => {
-                  const Icon = pillar.icon;
-                  return (
-                    <div
-                      key={pillar.title}
-                      className="rounded-[1.6rem] border border-black/6 bg-white/72 p-5 shadow-[0_18px_44px_rgba(39,43,28,0.06)]"
-                    >
-                      <Icon className="h-5 w-5 text-primary" />
-                      <h3 className="mt-4 text-lg font-semibold text-foreground">{pillar.title}</h3>
-                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{pillar.text}</p>
-                    </div>
-                  );
-                })}
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        <section id="reasons" className="container py-10 sm:py-16 lg:py-20">
+        <section id="reasons" className="container py-8 sm:py-12 lg:py-14">
           <SectionHeading
-            label="The six reasons"
-            title="This version reads like an investigative feature, not a compressed supplement pitch."
-            body="Each section is designed to continue the belief-building process started by the ad. Instead of dropping the visitor into a transaction, it walks her through the exact emotional and logical sequence that makes the offer feel deserved."
+            label="Why women are making the switch"
+            title="Here is why Motilli is standing out for women who feel bloated, full, gassy, and fed up on GLP-1s."
+            body="If you are tired of guessing and want something that feels believable, specific, and easy to add to your routine, these are the reasons women say Motilli starts to make sense quickly."
           />
 
           <div className="mt-10 grid gap-5 lg:grid-cols-2">
@@ -399,21 +320,61 @@ export default function Home() {
                   </div>
 
                   <p className="mt-6 text-base leading-8 text-muted-foreground">{reason.body}</p>
-
-                  <div className="mt-6 grid gap-3">
-                    {reason.points.map((point) => (
-                      <div
-                        key={point}
-                        className="flex gap-3 rounded-[1.25rem] border border-black/5 bg-white/72 px-4 py-4 text-sm leading-6 text-foreground"
-                      >
-                        <CircleCheckBig className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                        <span>{point}</span>
-                      </div>
-                    ))}
-                  </div>
                 </motion.article>
               );
             })}
+          </div>
+        </section>
+
+        <section className="container py-10 sm:py-16">
+          <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeIn}
+              transition={{ duration: 0.7 }}
+              className="overflow-hidden rounded-[2rem] border border-black/6 bg-[#f5f0e7] shadow-[0_24px_70px_rgba(39,43,28,0.08)]"
+            >
+              <img
+                src={mechanismImage}
+                alt="Illustrated diagram showing the stomach as the key place where GLP-1 digestive slowdown begins"
+                className="h-full w-full object-cover"
+              />
+            </motion.div>
+
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeIn}
+              transition={{ duration: 0.7, delay: 0.05 }}
+              className="space-y-6"
+            >
+              <p className="editorial-kicker">Why it can feel so intense</p>
+              <h2 className="font-display text-4xl leading-[0.96] tracking-tight text-foreground sm:text-5xl">
+                For a lot of women, the problem starts higher up than they thought.
+              </h2>
+              <p className="text-base leading-8 text-muted-foreground sm:text-lg">
+                GLP-1 medications help by slowing gastric emptying. That can also be why some women suddenly feel fuller for too long, burp up that rotten-egg taste, or feel like one meal is still there at bedtime. When that is the issue, random constipation fixes do not always touch the part that feels worst.
+              </p>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                {supportPoints.map((point) => {
+                  const Icon = point.icon;
+                  return (
+                    <div
+                      key={point.title}
+                      className="rounded-[1.6rem] border border-black/6 bg-white/72 p-5 shadow-[0_18px_44px_rgba(39,43,28,0.06)]"
+                    >
+                      <Icon className="h-5 w-5 text-primary" />
+                      <h3 className="mt-4 text-lg font-semibold text-foreground">{point.title}</h3>
+                      <p className="mt-2 text-sm leading-6 text-muted-foreground">{point.text}</p>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
           </div>
         </section>
 
@@ -442,39 +403,39 @@ export default function Home() {
               transition={{ duration: 0.65, delay: 0.05 }}
               className="rounded-[2rem] border border-black/6 bg-white/76 p-7 shadow-[0_24px_70px_rgba(39,43,28,0.08)] sm:p-10"
             >
-              <p className="editorial-kicker">Why the formula feels coherent</p>
+              <p className="editorial-kicker">What is inside</p>
               <h2 className="font-display text-4xl leading-[0.95] tracking-tight text-foreground sm:text-5xl">
-                Three jobs. One more believable reason to keep reading.
+                The formula is meant to feel specific, not random.
               </h2>
 
               <div className="mt-8 grid gap-5">
                 <div className="rounded-[1.6rem] border border-black/6 bg-[#faf7f1] p-5">
                   <div className="flex items-center gap-3 text-primary">
                     <TimerReset className="h-5 w-5" />
-                    <h3 className="text-xl font-semibold text-foreground">Celery-derived apigenin for stomach rhythm</h3>
+                    <h3 className="text-xl font-semibold text-foreground">Celery-derived apigenin</h3>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    The ingredient story begins with movement. Not urgency, not forcing, and not a harsh bathroom event — just a more intuitive explanation for why meals stop feeling parked.
+                    Chosen for women who feel like food just sits there. It is there to support smoother stomach motility so the problem feels less mysterious and the next step feels more straightforward.
                   </p>
                 </div>
 
                 <div className="rounded-[1.6rem] border border-black/6 bg-[#faf7f1] p-5">
                   <div className="flex items-center gap-3 text-primary">
                     <BadgeCheck className="h-5 w-5" />
-                    <h3 className="text-xl font-semibold text-foreground">Chlorophyllin for the sulfur-burp problem nobody wants to say out loud</h3>
+                    <h3 className="text-xl font-semibold text-foreground">Chlorophyllin</h3>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    The page now names the social symptom directly. That matters. Women do not click these ads because they love ingredients; they click because something embarrassing has been hijacking normal life.
+                    Included because sulfur burps are not a small problem when you are trying to work, travel, socialize, or simply sit near other people without worrying.
                   </p>
                 </div>
 
                 <div className="rounded-[1.6rem] border border-black/6 bg-[#faf7f1] p-5">
                   <div className="flex items-center gap-3 text-primary">
                     <Leaf className="h-5 w-5" />
-                    <h3 className="text-xl font-semibold text-foreground">Gentle soluble fiber for downstream support</h3>
+                    <h3 className="text-xl font-semibold text-foreground">Gentle soluble fiber</h3>
                   </div>
                   <p className="mt-3 text-sm leading-7 text-muted-foreground">
-                    Rather than promising a miracle, the page frames the formula as coordinated support: movement up top, less sulfur gas, and gentler flow below. That is what makes the product sound targeted instead of trendy.
+                    Added for steadier downstream support, so the formula feels more complete without leaning into harsh, urgent relief.
                   </p>
                 </div>
               </div>
@@ -492,16 +453,16 @@ export default function Home() {
               transition={{ duration: 0.65 }}
               className="rounded-[2rem] border border-black/6 bg-[linear-gradient(160deg,rgba(52,61,37,0.98),rgba(75,90,54,0.98))] p-7 text-white shadow-[0_26px_80px_rgba(40,45,30,0.22)] sm:p-10"
             >
-              <p className="text-[0.72rem] uppercase tracking-[0.26em] text-white/70">What changed in the emotional layer</p>
+              <p className="text-[0.72rem] uppercase tracking-[0.26em] text-white/70">Why women keep sharing it</p>
               <h2 className="mt-4 font-display text-4xl leading-[0.95] tracking-tight sm:text-5xl">
-                The page now treats the symptom burden like a real life problem — because that is what it is.
+                It is not only about digestion. It is about getting your day back.
               </h2>
               <p className="mt-6 max-w-2xl text-base leading-8 text-white/78 sm:text-lg">
-                Good bridge pages do not just explain physiology. They explain what the physiology steals: dinners, fitted clothes, long drives, confidence, mornings, and the feeling that your own body is becoming unpredictable. That is why the new design makes room for mood, pace, and credibility.
+                The real win is not just less bloating. It is not planning your clothes around your stomach. It is not dreading lunch. It is not worrying about sulfur burps in the car. It is being able to go to dinner, travel, work, and wake up without feeling like your body is running the whole day for you.
               </p>
 
               <blockquote className="mt-8 border-l border-white/20 pl-6 font-serifDisplay text-3xl leading-tight text-white sm:text-[2.15rem]">
-                “I did not need a louder sales page. I needed a calmer explanation that made me believe I wasn’t crazy for thinking the problem started earlier.”
+                “I finally felt like I could eat, leave the house, and trust my stomach again.”
               </blockquote>
             </motion.div>
 
@@ -533,18 +494,18 @@ export default function Home() {
           >
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
               <div>
-                <p className="editorial-kicker">Bridge completed</p>
+                <p className="editorial-kicker">A calmer next step</p>
                 <h2 className="font-display text-4xl leading-[0.95] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-                  If the mechanism made sense, the offer should feel calmer now too.
+                  If this sounds like what you have been dealing with, Motilli is worth trying.
                 </h2>
                 <p className="mt-5 max-w-2xl text-base leading-8 text-muted-foreground sm:text-lg">
-                  Motilli is positioned here as the next logical step, not a leap. It supports stomach motility, helps neutralize sulfur gas, and adds gentler downstream support in one pectin-based gummy designed for women navigating GLP-1 digestive side effects.
+                  Motilli supports stomach motility, helps with sulfur gas, and offers gentler digestive support in one easy gummy. It is for women who want something that matches what they are feeling and finally gives them a doable next step.
                 </p>
               </div>
 
               <div className="rounded-[1.9rem] border border-primary/12 bg-[#f6f1e6] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] sm:p-7">
                 <div className="flex items-center justify-between gap-4">
-                  <p className="text-[0.72rem] uppercase tracking-[0.24em] text-muted-foreground">Spring sale</p>
+                  <p className="text-[0.72rem] uppercase tracking-[0.24em] text-muted-foreground">Current offer</p>
                   <span className="rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-primary">
                     Most popular
                   </span>
@@ -554,17 +515,17 @@ export default function Home() {
                   <span className="pb-2 text-sm text-muted-foreground line-through">$44.99</span>
                 </div>
                 <p className="mt-4 text-sm leading-6 text-muted-foreground">
-                  Buy 2, get 1 free, with free shipping. A strong bridge makes the economics feel like support, not pressure.
+                  Buy 2, get 1 free, with free shipping over $45.
                 </p>
 
                 <div className="mt-6 grid gap-3">
                   <div className="flex items-start gap-3 rounded-[1.25rem] bg-white/80 px-4 py-4 text-sm leading-6 text-foreground">
                     <ShieldCheck className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                    90-day money-back guarantee with no hard reset if it is not the right fit.
+                    90-day money-back guarantee if it is not the right fit for you.
                   </div>
                   <div className="flex items-start gap-3 rounded-[1.25rem] bg-white/80 px-4 py-4 text-sm leading-6 text-foreground">
                     <Leaf className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                    Pectin-based gummies designed to feel easy, not medicinal or harsh.
+                    Pectin-based gummies designed to feel easier than another capsule routine.
                   </div>
                 </div>
 
@@ -575,7 +536,7 @@ export default function Home() {
                   Continue to Motilli <ArrowRight className="h-4 w-4" />
                 </a>
                 <p className="mt-4 text-center text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                  Free shipping over $45 · women’s support feature
+                  Free shipping over $45 · women’s digestive support
                 </p>
               </div>
             </div>
