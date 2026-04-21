@@ -65,8 +65,6 @@ const reasons: Reason[] = [
     title: "One gummy a day. Not another powder, tea, or pill routine.",
     body:
       "When your stomach already feels off every morning, the last thing you want is a five-step regimen with mixing, timing, and three bottles on the counter. Motilli is a single daily gummy designed to sit next to your coffee, not replace your kitchen. Women who have already tried the stack of fixes tell us this is the part that actually made them stick with it.",
-    quote:
-      "I’ve bought every supplement on the shelf. This is the one I actually remember to take.",
     icon: CircleCheckBig,
     image: "https://l2.guthealthblog.org/r5.jpeg",
   },
@@ -91,23 +89,28 @@ const reasons: Reason[] = [
     body:
       "You have already spent money on things that did not work. We know. That is why Motilli comes with a 90-day money-back guarantee — enough time to get through the slow start, past the first shifts, and into the weeks where the change actually shows up. If you are not feeling it by then, email us. You get a full refund. No forms, no restocking fee, no arguing.",
     icon: ShieldCheck,
-    image: "https://i.ibb.co/b5pNgwPS/guarantee-badge.jpg",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310419663027219763/HTVjWrkVxhKZCfFXmaDRkw/motilli-reason-06-guarantee-nH7xUfHy4VVgwJYQFGgmhd.webp",
   },
 ] as const;
 
-const heroStats = [
-  { value: "01", label: "Daily gummy" },
-  { value: "90", label: "Day guarantee" },
-  { value: "$45+", label: "Free shipping" },
-];
-
-const trustPills = [
-  "Stomach-first support",
-  "Pectin-based gummies",
-  "90-day money-back guarantee",
-  "Free shipping over $45",
-  "Built for GLP-1 digestive slowdown",
-];
+const scientificContext = [
+  {
+    value: "36 min",
+    label: "Pooled mean delay in solid-food gastric emptying versus placebo.",
+  },
+  {
+    value: "138.4 min",
+    label: "Mean gastric-emptying half-time on GLP-1 therapy in the meta-analysis.",
+  },
+  {
+    value: "95.0 min",
+    label: "Mean placebo half-time in the same pooled review.",
+  },
+  {
+    value: "15 studies",
+    label: "Included in the 2024 review, with scintigraphy data from 5 studies and n=247.",
+  },
+] as const;
 
 const formulaCards = [
   {
@@ -124,6 +127,34 @@ const formulaCards = [
     title: "Gentle soluble fiber",
     body: "Downstream support so the system keeps moving once the stomach does its job.",
     icon: Leaf,
+  },
+] as const;
+
+const comparisonRows = [
+  {
+    label: "Primary target",
+    motilli: "Stomach motility + upper-GI pressure",
+    other: "Colon regularity only",
+  },
+  {
+    label: "Sulfur-burp support",
+    motilli: "Chlorophyllin support included",
+    other: "Usually not addressed",
+  },
+  {
+    label: "Daily format",
+    motilli: "1 daily gummy",
+    other: "Often 2–4 gummies",
+  },
+  {
+    label: "GLP-1 fit",
+    motilli: "Stomach-first support",
+    other: "Generic fiber formula",
+  },
+  {
+    label: "Money-back window",
+    motilli: "90-day guarantee",
+    other: "Varies by brand",
   },
 ] as const;
 
@@ -166,6 +197,46 @@ function BrandMasthead() {
         <img src={motilliLogo} alt="Motilli" className="h-10 w-auto sm:h-12" />
       </div>
     </section>
+  );
+}
+
+function ScientificProofPanel() {
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.25 }}
+      variants={fadeIn}
+      transition={{ duration: 0.55, delay: 0.04 }}
+      className="overflow-hidden rounded-[2rem] border border-primary/14 bg-[linear-gradient(155deg,#26311c_0%,#3b4b2a_58%,#556c39_100%)] px-5 py-6 text-white shadow-[0_28px_70px_rgba(33,41,23,0.26)] sm:px-8 sm:py-9"
+    >
+      <div className="mx-auto max-w-4xl">
+        <p className="text-center font-mono text-[0.72rem] uppercase tracking-[0.28em] text-[#f6f1e6]/74 sm:text-[0.8rem]">
+          Scientific context
+        </p>
+        <h3 className="mx-auto mt-4 max-w-2xl text-center font-display text-[2.2rem] leading-[0.94] tracking-[-0.04em] text-[#f6f1e6] sm:text-[3rem]">
+          Real gastric-emptying data behind the stomach-first story.
+        </h3>
+        <div className="mt-6 grid grid-cols-2 gap-3 sm:gap-4">
+          {scientificContext.map((item) => (
+            <div
+              key={item.value}
+              className="rounded-[1.4rem] border border-white/10 bg-[rgba(246,241,230,0.08)] px-4 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] sm:px-5 sm:py-5"
+            >
+              <p className="font-display text-[2rem] leading-none tracking-[-0.04em] text-[#f6f1e6] sm:text-[2.8rem]">
+                {item.value}
+              </p>
+              <p className="mt-2 text-[0.84rem] leading-5 text-white/78 sm:text-[0.96rem] sm:leading-6">
+                {item.label}
+              </p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-5 text-center text-[0.82rem] leading-6 text-[#f6f1e6]/72 sm:text-sm">
+          Based on a 2024 systematic review and meta-analysis of GLP-1 receptor agonists using pooled solid-food gastric-emptying data.
+        </p>
+      </div>
+    </motion.section>
   );
 }
 
@@ -376,6 +447,60 @@ function OfferSectionBody() {
   );
 }
 
+function ComparisonSection() {
+  return (
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeIn}
+      transition={{ duration: 0.65 }}
+      className="rounded-[2.1rem] border border-black/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.98),rgba(246,243,236,0.98))] p-5 shadow-[0_28px_70px_rgba(21,27,17,0.08)] sm:p-8"
+    >
+      <div className="mx-auto max-w-3xl text-center">
+        <p className="inline-flex rounded-full bg-primary/8 px-4 py-2 text-[0.72rem] uppercase tracking-[0.28em] text-primary">
+          Comparison table
+        </p>
+        <h2 className="mt-5 font-display text-[2.4rem] leading-[0.94] tracking-[-0.04em] text-foreground sm:text-[3.5rem]">
+          How Motilli compares to standard fiber gummies.
+        </h2>
+        <p className="mt-4 text-base leading-7 text-muted-foreground sm:text-lg">
+          A quick side-by-side for women who are trying to solve GLP-1 heaviness, pressure, and sulfur burps — not just general regularity.
+        </p>
+      </div>
+
+      <div className="mt-8 overflow-hidden rounded-[1.7rem] border border-black/6 bg-white shadow-[0_14px_40px_rgba(21,27,17,0.05)]">
+        <div className="grid grid-cols-[0.95fr_1fr_1fr] border-b border-black/6 bg-[#f6f1e6]">
+          <div className="p-3 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground sm:p-4">Category</div>
+          <div className="border-l border-black/6 p-3 text-center sm:p-4">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-primary">Motilli</p>
+            <p className="mt-1 text-sm font-semibold text-foreground sm:text-base">Stomach-first gummy</p>
+          </div>
+          <div className="border-l border-black/6 p-3 text-center sm:p-4">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-muted-foreground">Other fiber gummies</p>
+            <p className="mt-1 text-sm font-semibold text-foreground/84 sm:text-base">Typical formula</p>
+          </div>
+        </div>
+
+        {comparisonRows.map((row, index) => (
+          <div
+            key={row.label}
+            className={`grid grid-cols-[0.95fr_1fr_1fr] ${index !== 0 ? "border-t border-black/6" : ""}`}
+          >
+            <div className="p-3 text-sm font-semibold leading-5 text-foreground sm:p-4 sm:text-base">{row.label}</div>
+            <div className="border-l border-black/6 p-3 text-sm leading-5 text-primary sm:p-4 sm:text-base">
+              {row.motilli}
+            </div>
+            <div className="border-l border-black/6 p-3 text-sm leading-5 text-muted-foreground sm:p-4 sm:text-base">
+              {row.other}
+            </div>
+          </div>
+        ))}
+      </div>
+    </motion.section>
+  );
+}
+
 export default function Home() {
   const firstReasons = reasons.slice(0, 4);
   const lastReasons = reasons.slice(4);
@@ -391,85 +516,58 @@ export default function Home() {
         <section className="relative overflow-hidden bg-[linear-gradient(140deg,#202718_0%,#2d371f_38%,#405032_100%)] text-white">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(174,198,129,0.18),transparent_30%),linear-gradient(to_bottom,rgba(255,255,255,0.04),transparent_28%)]" />
           <div className="container relative py-8 sm:py-10 lg:py-14">
-            <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={fadeIn}
-                transition={{ duration: 0.7, ease: "easeOut" }}
-                className="grid gap-8"
-              >
-                <div className="max-w-4xl space-y-6">
-                  <p className="inline-flex rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[0.72rem] uppercase tracking-[0.28em] text-white/72">
-                    For GLP-1 women dealing with bloating and sulfur burps
-                  </p>
-                  <h1 className="max-w-5xl font-display text-[clamp(3.1rem,6vw,6.4rem)] leading-[0.9] tracking-[-0.05em] text-white">
-                    6 reasons women are pairing Motilli with their GLP-1 — and ditching the laxatives
-                  </h1>
-                  <p className="max-w-3xl text-lg leading-8 text-white/76 sm:text-xl">
-                    If you are scared to eat before errands, dreading that sour-egg burp in the car, or lying in bed at night still feeling like dinner has not moved, you are not overreacting. That is a specific problem with a specific cause. And it is why a growing number of women on GLP-1s are reaching for Motilli instead of another laxative, probiotic, or magnesium pill that was never going to help.
-                  </p>
-                </div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={fadeIn}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="mx-auto max-w-5xl"
+            >
+              <figure className="aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))] p-3 shadow-[0_28px_80px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:p-4">
+                <img
+                  src={heroImage}
+                  alt="Woman holding Motilli celery juice fiber gummies"
+                  className="block h-full w-full rounded-[1.7rem] object-cover"
+                />
+              </figure>
 
-                <div className="flex flex-wrap gap-3">
-                  <a
-                    href="#reasons"
-                    className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[#26311c] shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-0.5"
-                  >
-                    See the 6 reasons <ArrowRight className="h-4 w-4" />
-                  </a>
-                </div>
+              <div className="mt-4 max-w-4xl space-y-3 sm:mt-5 sm:space-y-4">
+                <p className="inline-flex rounded-full border border-white/10 bg-white/8 px-4 py-2 text-[0.66rem] uppercase tracking-[0.24em] text-white/72 sm:text-[0.72rem]">
+                  For GLP-1 women dealing with bloating and sulfur burps
+                </p>
+                <h1 className="max-w-5xl font-display text-[clamp(1.95rem,6.9vw,4.35rem)] leading-[0.93] tracking-[-0.045em] text-white">
+                  6 reasons women are pairing Motilli with their GLP-1 — and ditching the laxatives
+                </h1>
+                <p className="max-w-3xl text-[0.96rem] leading-6 text-white/78 sm:text-[1.02rem] sm:leading-7">
+                  If meals still feel stuck for hours, the sulfur burps keep showing up, and your stomach feels heavy long after dinner, you are not imagining it. Many women on GLP-1s are turning to Motilli because it is built for the stomach-first slowdown behind that pattern — not just the colon symptoms that show up later.
+                </p>
+              </div>
 
-                <div className="grid gap-4 border-t border-white/10 pt-6 sm:grid-cols-[repeat(3,minmax(0,1fr))] lg:max-w-2xl">
-                  {heroStats.map((stat) => (
-                    <div key={stat.label} className="rounded-[1.35rem] border border-white/10 bg-white/6 px-5 py-4 backdrop-blur-sm">
-                      <p className="text-2xl font-semibold text-white sm:text-3xl">{stat.value}</p>
-                      <p className="mt-1 text-sm uppercase tracking-[0.18em] text-white/62">{stat.label}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.aside
-                initial={{ opacity: 0, x: 28 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-                className="lg:pt-3"
-              >
-                <figure className="overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(180deg,rgba(255,255,255,0.12),rgba(255,255,255,0.04))] p-4 shadow-[0_28px_80px_rgba(0,0,0,0.22)] backdrop-blur-sm sm:p-5">
-                  <img
-                    src={heroImage}
-                    alt="Woman holding Motilli celery juice fiber gummies"
-                    className="block h-auto w-full rounded-[1.7rem] object-cover"
-                  />
-                  <figcaption className="px-2 pb-2 pt-5 text-sm leading-7 text-white/72 sm:px-3">
-                    A lifestyle look at the stomach-first gummy many GLP-1 users are trying when bloating, heaviness, and sulfur burps keep showing up.
-                  </figcaption>
-                </figure>
-              </motion.aside>
-            </div>
-          </div>
-        </section>
-
-        <section className="border-y border-black/6 bg-white/70">
-          <div className="container py-4">
-            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
-              {trustPills.map((pill) => (
-                <span
-                  key={pill}
-                  className="rounded-full border border-primary/10 bg-background/85 px-4 py-2 text-[0.7rem] font-medium uppercase tracking-[0.18em] text-primary/82 shadow-sm"
+              <div className="mt-5 flex flex-col items-start gap-3 sm:mt-7">
+                <a
+                  href="#offer-start"
+                  className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[#26311c] shadow-[0_16px_36px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-0.5"
                 >
-                  {pill}
-                </span>
-              ))}
-            </div>
+                  Get started <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="#reasons"
+                  className="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/8 px-6 py-4 text-sm font-semibold text-white shadow-[0_16px_36px_rgba(0,0,0,0.16)] transition duration-300 hover:-translate-y-0.5"
+                >
+                  See the 6 reasons <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </motion.div>
           </div>
         </section>
 
         <section id="reasons" className="container py-10 sm:py-14 lg:py-18">
           <div className="grid gap-6 lg:gap-8">
             {firstReasons.map((reason) => (
-              <ReasonBlock key={reason.number} reason={reason} />
+              <div key={reason.number} className="grid gap-6 lg:gap-8">
+                <ReasonBlock reason={reason} />
+                {reason.number === "01" ? <ScientificProofPanel /> : null}
+              </div>
             ))}
 
             <SocialProofSection />
@@ -478,7 +576,11 @@ export default function Home() {
               <ReasonBlock key={reason.number} reason={reason} />
             ))}
 
-            <OfferSectionBody />
+            <div id="offer-start" className="scroll-mt-24">
+              <OfferSectionBody />
+            </div>
+
+            <ComparisonSection />
           </div>
         </section>
 
